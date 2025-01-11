@@ -24,7 +24,7 @@ function Navbar() {
           className={`nav-logo ${location.pathname === '/' ? 'active' : ''}`}
           onClick={closeMenu}
         >
-          Paolo Imbag — UI/Visual & Brand Designer
+          Paolo Imbag
         </Link>
 
         {/* Hamburger Menu Button */}

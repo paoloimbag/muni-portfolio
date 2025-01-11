@@ -9,7 +9,6 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import ProjectDetail from './components/ProjectDetail';
 import Background from './components/Background';
 import CustomCursor from './components/CustomCursor';
-import ScrollProgress from './components/ScrollProgress';
 import Stats from './components/Stats';
 import Skills from './components/Skills';
 import About from './components/About';
@@ -59,7 +58,6 @@ function App() {
   );
 }
 
-// Separate component to use useLocation hook
 function AppContent({ 
   handleMouseMove, 
   hoveredSpecialty, 
@@ -75,60 +73,57 @@ function AppContent({
 
   return (
     <div className="App" onMouseMove={handleMouseMove}>
-      {isHomePage && <Background />}  {/* Only render Background on home page */}
+      {isHomePage && <Background />}
       <CustomCursor />
-      <ScrollProgress />
+      <Navbar />
       <Routes>
         <Route path="/" element={
-          <>
-            <Navbar />
-            <main>
-              <div className="content-wrapper">
-                <div className="hero">
-                  <h1 className="hero-title">
-                    I am{' '}
-                    <span 
-                      className="name-text"
-                      onMouseEnter={() => setHoveredName(true)}
-                      onMouseLeave={() => setHoveredName(false)}
-                    >
-                      Paolo Imbag
-                    </span>
-                    {' '}a<br />
-                    Digital Designer — Specialise in{' '}
-                    <span 
-                      className="specialty-text"
-                      onMouseEnter={() => setHoveredSpecialty('ui')}
-                      onMouseLeave={() => setHoveredSpecialty(null)}
-                    >
-                      UI
-                    </span>
-                    /{' '}
-                    <span 
-                      className="specialty-text"
-                      onMouseEnter={() => setHoveredSpecialty('visual')}
-                      onMouseLeave={() => setHoveredSpecialty(null)}
-                    >
-                      Visual Design
-                    </span>
-                    /{' '}
-                    <span 
-                      className="specialty-text"
-                      onMouseEnter={() => setHoveredSpecialty('branding')}
-                      onMouseLeave={() => setHoveredSpecialty(null)}
-                    >
-                      Branding
-                    </span>
-                  </h1>
-                </div>
-                <Projects />
-                <Stats />
-                <Skills />
-                <Experience />
+          <main>
+            <div className="content-wrapper">
+              <div className="hero">
+                <h1 className="hero-title">
+                  I am{' '}
+                  <span 
+                    className="name-text"
+                    onMouseEnter={() => setHoveredName(true)}
+                    onMouseLeave={() => setHoveredName(false)}
+                  >
+                    Paolo Imbag
+                  </span>
+                  {' '}a<br />
+                  Digital Designer — Specialise in{' '}
+                  <span 
+                    className="specialty-text"
+                    onMouseEnter={() => setHoveredSpecialty('ui')}
+                    onMouseLeave={() => setHoveredSpecialty(null)}
+                  >
+                    UI
+                  </span>
+                  /{' '}
+                  <span 
+                    className="specialty-text"
+                    onMouseEnter={() => setHoveredSpecialty('visual')}
+                    onMouseLeave={() => setHoveredSpecialty(null)}
+                  >
+                    Visual Design
+                  </span>
+                  /{' '}
+                  <span 
+                    className="specialty-text"
+                    onMouseEnter={() => setHoveredSpecialty('branding')}
+                    onMouseLeave={() => setHoveredSpecialty(null)}
+                  >
+                    Branding
+                  </span>
+                </h1>
               </div>
-              <Contact />
-            </main>
-          </>
+              <Projects />
+              <Stats />
+              <Skills />
+              <Experience />
+            </div>
+            <Contact />
+          </main>
         } />
         <Route path="/about" element={<About />} />
         <Route path="/project/:id" element={<ProjectDetail />} />

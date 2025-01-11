@@ -67,11 +67,6 @@
   transition: width 0.3s ease;
 }
 
-.nav-logo:hover::after,
-.nav-logo.active::after {
-  width: 100%;
-}
-
 .nav-links {
   display: flex;
   gap: 3rem;

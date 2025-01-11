@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { useInView } from '../hooks/useInView';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Projects.css';
+import projectImage1 from '../assets/projects/warpdrive/Admin Dashboard Light Dark Mode.webp';
 
 function Projects() {
   const [hoveredProject, setHoveredProject] = useState(null);
@@ -26,8 +27,8 @@ function Projects() {
   const projects = [
     {
       id: 'project-1',
-      name: "Warpdrive App — Dashboard",
-      image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800",
+      name: "Warpdrive App — Dashboard Redesign",
+      image: projectImage1,
       category: "UI Design",
       tags: ["Dashboard", "UI Design", "Dark Mode"],
       description: "A modern admin dashboard interface with light and dark mode support, featuring clean data visualization and intuitive navigation."
@@ -109,11 +110,18 @@ function Projects() {
         <div 
           className={`project-preview ${hoveredProject ? 'visible' : ''}`}
           style={{
-            backgroundImage: hoveredProject ? `url(${hoveredProject?.image})` : 'none',
             left: `${mousePosition.x}px`,
             top: `${mousePosition.y}px`
           }}
-        />
+        >
+          {hoveredProject && (
+            <img 
+              src={hoveredProject.image} 
+              alt={hoveredProject.name}
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            />
+          )}
+        </div>
       </div>
     </section>
   );

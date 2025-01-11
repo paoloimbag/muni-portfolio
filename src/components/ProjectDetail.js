@@ -6,21 +6,20 @@ import '../styles/ProjectDetail.css';
 
 const projects = {
   'project-1': {
-    title: "Brand Identity Design",
-    subtitle: "Visual Identity System for Tech Startup",
-    description: "A comprehensive brand identity design for a technology startup, focusing on creating a cohesive visual language that reflects innovation and reliability.",
+    title: "Warpdrive App — Dashboard Redesign",
+    subtitle: "Dashboard UI Design",
+    description: "A modern admin dashboard interface with light and dark mode support, featuring clean data visualization and intuitive navigation.",
     role: "Lead Designer",
     duration: "3 months",
-    year: "2023",
-    client: "TechVision Inc.",
-    services: ["Brand Strategy", "Visual Identity", "Design System", "Brand Guidelines"],
+    year: "2024 - 2025",
+    client: "Warpdrive",
+    services: ["Visual Identity", "Design System", "Brand Guidelines"],
     challenge: "The challenge was to create a distinctive brand identity that would stand out in the crowded tech market while maintaining simplicity and scalability.",
     solution: "Developed a flexible design system that adapts across different platforms while maintaining brand consistency. Created a unique visual language that combines geometric shapes with a modern color palette.",
     images: [
-      "/images/project1/hero.jpg",
-      "/images/project1/brand-guidelines.jpg",
-      "/images/project1/applications.jpg",
-      "/images/project1/mockups.jpg"
+      require('../assets/projects/warpdrive/Admin Dashboard Light Dark Mode.webp'),
+      require('../assets/projects/warpdrive/Admin Dashboard Dark Mode.webp'),
+      require('../assets/projects/warpdrive/Admin Dashboard Light Mode.webp')
     ],
     nextProject: "project-2"
   },
@@ -36,7 +35,7 @@ const projects = {
     challenge: "The main challenge was simplifying complex financial data visualization while making the interface more intuitive and user-friendly.",
     solution: "Created a clean, minimalist interface with clear hierarchy and improved navigation. Implemented new data visualization components and simplified user flows.",
     images: [
-      "/images/project2/hero.jpg",
+      "assets/projects/warpdrive/og-image.jpg",
       "/images/project2/wireframes.jpg",
       "/images/project2/ui-components.jpg",
       "/images/project2/final-designs.jpg"
