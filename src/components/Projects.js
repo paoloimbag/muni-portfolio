@@ -26,7 +26,7 @@ function Projects() {
   const projects = [
     {
       id: 'project-1',
-      name: "Warpdrive App — Dashboard (Light/Dark Mode)",
+      name: "Warpdrive App — Dashboard",
       image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800",
       category: "UI Design",
       tags: ["Dashboard", "UI Design", "Dark Mode"],
