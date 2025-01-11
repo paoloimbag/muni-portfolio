@@ -79,19 +79,6 @@ function Experience() {
               A decade of crafting digital experiences and building brands
             </p>
           </div>
-          <a 
-            href={CV}
-            className="download-cv"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => {
-              e.preventDefault();
-              window.open(CV, '_blank');
-            }}
-          >
-            Download CV
-            <span className="arrow">→</span>
-          </a>
         </div>
         <div 
           ref={listRef}

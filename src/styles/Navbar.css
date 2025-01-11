@@ -253,4 +253,25 @@
   .nav-links {
     padding: 5rem 1.5rem;
   }
+}
+
+/* Add these styles */
+.download-cv {
+  color: #8B6F5E;
+  border: 1px solid rgba(139, 111, 94, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-left: 1rem;
+}
+
+.download-cv:hover {
+  background: rgba(139, 111, 94, 0.08);
+}
+
+@media (max-width: 768px) {
+  .download-cv {
+    margin: 0;
+    padding: 1rem;
+    border: none;
+  }
 } 

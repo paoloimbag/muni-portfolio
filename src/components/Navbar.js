@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import '../styles/Navbar.css';
+import CV from '../assets/documents/Paolo Imbag - Resume (2025).pdf';
 
 function Navbar() {
   const location = useLocation();
@@ -14,6 +15,11 @@ function Navbar() {
   const closeMenu = () => {
     setIsMenuOpen(false);
     document.body.style.overflow = 'unset';
+  };
+
+  const handleDownloadCV = (e) => {
+    e.preventDefault();
+    window.open(CV, '_blank');
   };
 
   return (
@@ -55,13 +61,23 @@ function Navbar() {
             <span className="nav-link-indicator"></span>
           </Link>
           <Link 
-            to="/info" 
-            className={`nav-link ${location.pathname === '/info' ? 'active' : ''}`}
+            to="/get-in-touch" 
+            className={`nav-link ${location.pathname === '/get-in-touch' ? 'active' : ''}`}
             onClick={closeMenu}
           >
-            Info
+            Get In Touch
             <span className="nav-link-indicator"></span>
           </Link>
+          <a 
+            href={CV}
+            className="nav-link download-cv"
+            onClick={handleDownloadCV}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Download CV
+            <span className="nav-link-indicator"></span>
+          </a>
         </div>
       </div>
     </nav>
