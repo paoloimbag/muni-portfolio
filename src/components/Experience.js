@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import { useInView } from '../hooks/useInView';
 import '../styles/Experience.css';
-import CV from '../assets/documents/Paolo Imbag - Resume (2025).pdf';
 
 function Experience() {
   const experiences = [

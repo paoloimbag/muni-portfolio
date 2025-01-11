@@ -5,9 +5,8 @@ import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
 import profileImage from './assets/paolo-profile.jpg';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ProjectDetail from './components/ProjectDetail';
-import Background from './components/Background';
 import CustomCursor from './components/CustomCursor';
 import Stats from './components/Stats';
 import Skills from './components/Skills';
@@ -68,12 +67,8 @@ function AppContent({
   specialties, 
   profileImage 
 }) {
-  const location = useLocation();
-  const isHomePage = location.pathname === '/';
-
   return (
     <div className="App" onMouseMove={handleMouseMove}>
-      {isHomePage && <Background />}
       <CustomCursor />
       <Navbar />
       <Routes>
