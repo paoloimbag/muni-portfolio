@@ -1,0 +1,238 @@
+.project-detail {
+  padding-top: 80px;
+  background: #FFF8F4;
+}
+
+/* Hero Section */
+.project-hero {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  height: 80vh;
+  overflow: hidden;
+}
+
+.project-hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+  color: #fff;
+  width: 90%;
+  max-width: 800px;
+}
+
+.project-hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.project-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  opacity: 0.8;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+/* Project Content */
+.project-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+/* Info Grid */
+.project-info {
+  margin-bottom: 4rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(139, 111, 94, 0.1);
+}
+
+.info-item h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #8B6F5E;
+  margin-bottom: 0.5rem;
+}
+
+.info-item p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: #000;
+}
+
+/* Project Description */
+.project-description {
+  max-width: 800px;
+  margin: 0 auto 6rem;
+}
+
+.project-description h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 3rem 0 1.5rem;
+  color: #000;
+}
+
+.project-description p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.services-list {
+  margin: 3rem 0;
+}
+
+.services-list h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #8B6F5E;
+  margin-bottom: 1rem;
+}
+
+.services-list ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.services-list li {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  color: #666;
+  padding: 0.5rem 1rem;
+  background: rgba(139, 111, 94, 0.1);
+  border-radius: 100px;
+}
+
+/* Project Gallery */
+.project-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  margin-bottom: 6rem;
+}
+
+.gallery-item {
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.02);
+}
+
+/* Next Project */
+.next-project {
+  text-align: center;
+  padding: 4rem 0;
+  border-top: 1px solid rgba(139, 111, 94, 0.1);
+}
+
+.next-project p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #8B6F5E;
+  margin-bottom: 1rem;
+}
+
+.next-project-link {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.next-project-link:hover {
+  color: #8B6F5E;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .project-hero {
+    height: 70vh;
+  }
+
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .project-hero {
+    height: 60vh;
+  }
+
+  .project-content {
+    padding: 3rem 1.5rem;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .project-description {
+    margin-bottom: 4rem;
+  }
+
+  .project-description h2 {
+    font-size: 1.75rem;
+    margin: 2rem 0 1rem;
+  }
+
+  .project-description p {
+    font-size: 1rem;
+  }
+
+  .project-gallery {
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .next-project {
+    padding: 3rem 0;
+  }
+
+  .next-project-link {
+    font-size: 1.5rem;
+  }
+} 

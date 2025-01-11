@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #000;
+  background: #FFF8F4;
+  line-height: 1.5;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  cursor: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  padding-top: 80px;
+}
+
+.content-wrapper {
+  background: #FFF8F4;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 8rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.content-wrapper > * {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.hero {
+  padding: 8rem 2rem 4rem;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 5vw, 5em);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  max-width: 1200px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .content-wrapper > * {
+    padding: 0 1.5rem;
+  }
+
+  .hero {
+    padding: 4rem 1.5rem 2rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+  }
+}
+
+.name-text, .specialty-text {
+  display: inline-block;
+  position: relative;
+  cursor: default;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.name-text:hover, .specialty-text:hover {
+  color: #666;
+}
+
+.name-preview, .specialty-preview {
+  position: fixed;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+  z-index: 100;
+  border-radius: 4px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  background-size: cover;
+  background-position: center;
+}
+
+.name-preview {
+  width: 300px;
+  height: 400px;
+}
+
+.specialty-preview {
+  width: 400px;
+  height: 300px;
+}
+
+.name-preview.visible,
+.specialty-preview.visible {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .name-preview,
+  .specialty-preview {
+    display: none;
+  }
+}
+
+a, 
+button,
+[role="button"],
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+  cursor: none;
+}
+
+@media (max-width: 768px) {
+  body,
+  a,
+  button,
+  [role="button"],
+  input[type="submit"],
+  input[type="button"],
+  input[type="reset"] {
+    cursor: auto;
+  }
+}

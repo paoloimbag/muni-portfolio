@@ -1,0 +1,49 @@
+.filters {
+  padding: 2rem;
+  background: #f8f8f8;
+  border-bottom: 1px solid #e7e7e9;
+}
+
+.trending-searches {
+  margin-bottom: 2rem;
+}
+
+.search-tags {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.search-tags a {
+  color: #6e6d7a;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background: white;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.filter-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.category h3 {
+  color: #0d0c22;
+  margin-bottom: 1rem;
+}
+
+.category ul {
+  list-style: none;
+}
+
+.category ul li {
+  margin-bottom: 0.5rem;
+}
+
+.category ul li a {
+  color: #6e6d7a;
+  text-decoration: none;
+} 

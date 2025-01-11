@@ -1,0 +1,26 @@
+.custom-cursor {
+  width: 20px;
+  height: 20px;
+  background: rgba(139, 111, 94, 0.2);
+  border: 1px solid rgba(139, 111, 94, 0.3);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.1s ease, width 0.2s ease, height 0.2s ease;
+  transform-origin: center;
+  backdrop-filter: invert(1);
+  mix-blend-mode: difference;
+}
+
+.custom-cursor.hover {
+  width: 40px;
+  height: 40px;
+  background: rgba(139, 111, 94, 0.1);
+}
+
+@media (max-width: 768px) {
+  .custom-cursor {
+    display: none;
+  }
+} 

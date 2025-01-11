@@ -1,0 +1,278 @@
+.experience {
+  padding: 4rem 2rem 8rem;
+  opacity: 1;
+  width: 100%;
+  overflow: hidden;
+}
+
+.experience-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.header-content {
+  max-width: 800px;
+}
+
+.section-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.experience-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.experience-item {
+  position: relative;
+  padding: 2rem;
+  margin: 0 -2rem;
+  cursor: pointer;
+  border-top: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+  opacity: 1;
+  background: transparent;
+}
+
+.experience-item:hover {
+  transform: translateX(20px);
+  background: rgba(139, 111, 94, 0.03);
+}
+
+.company-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.period {
+  font-size: 1rem;
+  color: #666;
+  min-width: 120px;
+  text-align: right;
+}
+
+.role {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: #000;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  max-width: 70%;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+  max-width: 70%;
+}
+
+.location {
+  display: block;
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.description-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 70%;
+}
+
+.description-item {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.description-item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #000;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.skill-tag {
+  font-size: 0.875rem;
+  color: #666;
+  background: #f5f5f5;
+  padding: 0.25rem 0.75rem;
+  border-radius: 100px;
+  transition: all 0.2s ease;
+}
+
+.experience-item:hover .skill-tag {
+  background: #e5e5e5;
+  color: #000;
+}
+
+@media (max-width: 1200px) {
+  .experience {
+    padding: 8rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience {
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 3rem;
+  }
+
+  .experience-grid {
+    gap: 3rem;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .company-name {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .period {
+    text-align: left;
+  }
+
+  .role,
+  .description {
+    max-width: 100%;
+  }
+
+  .experience-item:hover {
+    transform: none;
+    background: rgba(139, 111, 94, 0.03);
+  }
+
+  .description-list {
+    max-width: 100%;
+  }
+
+  .skills-list {
+    margin-top: 1rem;
+  }
+
+  .skill-tag {
+    font-size: 0.75rem;
+  }
+
+  .role {
+    font-size: 1.75rem;
+    max-width: 100%;
+    margin-bottom: 1.25rem;
+  }
+
+  .experience-item {
+    padding: 2rem 1.5rem;
+    margin: 0 -1.5rem;
+  }
+
+  .download-cv {
+    font-size: 0.75rem;
+  }
+
+  .download-cv .arrow {
+    font-size: 1rem;
+  }
+
+  .experience-content,
+  .experience-item,
+  .experience-title,
+  .experience-company,
+  .experience-date,
+  .experience-description {
+    text-align: left;
+  }
+
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Add these animation styles */
+.fade-in {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
+}
+
+.experience-item.fade-in {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.download-cv {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #1C1C1C;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.download-cv:hover {
+  opacity: 0.7;
+}
+
+.download-cv .arrow {
+  font-size: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.download-cv:hover .arrow {
+  transform: translateX(4px);
+} 

@@ -1,0 +1,101 @@
+.skills {
+  padding: 8rem 2rem;
+}
+
+.skills-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: 4rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+}
+
+.skill-category {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.skill-category.animate {
+  animation: fadeUpSkills 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.category-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #000;
+}
+
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.tool {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  color: #666;
+  background: rgba(139, 111, 94, 0.08);
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.skill-category.animate .tool {
+  animation: fadeUpTools 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeUpSkills {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUpTools {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .skills {
+    padding: 4rem 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 3rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .category-title {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+} 

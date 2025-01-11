@@ -1,0 +1,252 @@
+.contact {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    -45deg,
+    #FFF8F4,
+    #F3E9E2,
+    #E2C9BA,
+    #8B6F5E
+  );
+  background-size: 300% 300%;
+  animation: gradientBG 20s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.contact-container {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 8rem 2rem;
+}
+
+.contact-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  mix-blend-mode: luminosity;
+}
+
+/* Enhanced gradient animation */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* Improved overlay with noise texture */
+.contact::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+}
+
+.contact::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 248, 244, 0.1),
+    rgba(139, 111, 94, 0.05)
+  );
+  backdrop-filter: blur(10px);
+}
+
+/* Add a subtle floating animation to content */
+.contact-content {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 6rem 1.5rem;
+  }
+
+  .contact {
+    background-size: 200% 200%;
+  }
+}
+
+.contact {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #111;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  min-height: 30vh;
+  display: flex;
+  align-items: center;
+  padding: 4rem 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.contact.visible {
+  opacity: 1;
+}
+
+.contact-spacer {
+  min-height: 30vh;
+  pointer-events: none;
+}
+
+.contact-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 8vw, 6em);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.contact-description {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  color: #999;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.contact-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.contact-button {
+  background: #fff;
+  color: #111;
+  border: none;
+  padding: 1.25rem 3rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.contact-button:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+}
+
+.contact-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.contact-links a {
+  color: #999;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.contact-links a:hover {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    min-height: 40vh;
+    padding: 3rem 0;
+  }
+
+  .contact-spacer {
+    min-height: 40vh;
+  }
+
+  .contact-container {
+    padding: 0 1.5rem;
+  }
+
+  .contact-title {
+    font-size: clamp(2rem, 6vw, 3em);
+    margin-bottom: 0.75rem;
+  }
+
+  .contact-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-button {
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+  }
+
+  .contact-links {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contact-links a {
+    font-size: 0.875rem;
+  }
+}
+
+.contact-content.fade-in {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 
